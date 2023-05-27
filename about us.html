@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- favicon -->
+     <link rel="shortcut icon" type="image/png" href="img/vehicle-4.png">
+    <title>About Us</title>
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins", sans-serif;
+}
+        :root{
+    --main-color: #fe5b3d;
+    --secon-color: #ffac38;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d, #ffac38);
+    --yellow:#f9d806;
+    --light-yellow:#ffee80;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(0,0,0,.1);
+
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:var(--light-yellow);
+    color:var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.home{
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h3{
+    color:var(--black);
+    font-size: 7.5vw;
+    text-transform: uppercase;
+}
+
+.home img{
+    width:100%;
+    margin:1rem 0;
+}
+.icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap:1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: #eee;
+}
+
+.icons-container .icons{
+    background:#fff;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding:2rem;
+    gap:1.5rem;
+}
+
+.icons-container .icons i{
+    height:5rem;
+    width:5rem;
+    line-height:5rem;
+    font-size:2.5rem;
+    color:var(--black);
+    background:#eee;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.icons-container .icons .content h3{
+    font-size: 2.5rem;
+    color:var(--yellow);
+}
+
+.icons-container .icons .content p{
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.icons-container .icons:hover{
+    background:var(--black);
+}
+
+.icons-container .icons:hover i{
+    background:var(--yellow);
+}
+
+.icons-container .icons:hover .content h3{
+    color:#fff;
+}
+
+.icons-container .icons:hover .content p{
+    color:#eee;
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="home" id="home">
+
+        <h3 data-speed="-2" class="home-parallax">find your car</h3>
+    
+        <img data-speed="5" class="home-parallax" src="image/home-img.png" alt="">
+    
+        <a data-speed="7" href="index.html" class="btn home-parallax">Learn More</a>
+    
+    </section>
+
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-home"></i>
+            <div class="content">
+                <h3>50+</h3>
+                <p>branches</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>1770+</h3>
+                <p>cars available</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fas fa-users"></i>
+            <div class="content">
+                <h3>350+</h3>
+                <p>happy clients</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>500+</h3>
+                <p>news cars</p>
+            </div>
+        </div>
+    
+    </section>
+
+    <script>
+       document.querySelector('.home').onmousemove = (e) =>{
+
+document.querySelectorAll('.home-parallax').forEach(elm =>{
+
+  let speed = elm.getAttribute('data-speed');
+
+  let x = (window.innerWidth - e.pageX * speed) / 90;
+  let y = (window.innerHeight - e.pageY * speed) / 90;
+
+  elm.style.transform = `translateX(${y}px) translateY(${x}px)`;
+
+});
+
+};
+    </script>
+</body>
+</html>

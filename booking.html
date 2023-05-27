@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- favicon -->
+     <link rel="shortcut icon" type="image/png" href="img/vehicle-4.png">
+     <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(image/RentalCarLG.jpg);
+    background-position: center;
+    background-size: auto;
+}
+#form{
+    background-color: #000;
+    height:400px;
+    width:800px;
+    margin: auto;
+    margin-top: 100px;
+    opacity:0.7;
+}
+#first-group{
+    border:none;
+    width:400px;
+    margin-top: 38px;
+    position: absolute;
+}
+#content{
+    border: 1px solid #fff;
+    margin:10px;
+    margin-left: 8px;
+    padding:5px;
+}
+#content #input-group{
+    border:none;
+    outline:none;
+    background: transparent;
+    margin-left:8px;
+    width:300px;
+    color:#fff;
+}
+::placeholder{
+    color:#fff;
+}
+.fa{
+    display:inline-block;
+    color:red;
+    border-right:1px solid #fff;
+    padding:8px;
+    margin-left: 8px;
+}
+.fas{
+    display:inline-block;
+    color:red;
+    border-right:1px solid #fff;
+    padding:8px;
+    margin-left: 8px;
+}
+#second-group{
+    border:none;
+    width:400px;
+    margin-top: 55px;
+    margin-left:400px;
+}
+#submit-btn{
+    margin-top: 30px;
+    margin-left: 600px;
+    background: transparent;
+    color:#fff;
+    width:150px;
+    border:1px solid red;
+    outline:none;
+    padding:10px;
+    font-size: 20px;
+}
+     </style>
+    <title>Vehicle Booking Form</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form-group"  method="post" action="booking.php">
+            <div id="form">
+                <h1 class="text-white text-center">Booking Now</h1>
+
+                <div id="first-group">
+
+                    <div id="content">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="First name" name="Fname">
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="Phone number" name="pnumber">
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="Pickup Date" name="Pdate">
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <input type="number" id="input-group" style="background-color: black;" placeholder="number of days" name="num_days">
+                        <!-- <select id="input-group" style="background-color: black;">
+                            <option value="">No.of days</option>
+                            <option value="">1-5</option>
+                            <option value="">6-10</option>
+                            <option value="">11-20</option>
+                        </select> -->
+                    </div>
+
+                </div>
+
+                <div id="second-group">
+
+                    <div id="content">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="Last name" name="Lname">
+                    </div>
+
+                    <div id="content">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <input type="email" id="input-group" placeholder="Email" name="email">
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="Return Date" name="Rdate">
+                    </div>
+
+                    <div id="content">
+                        <i class="fas fa-car" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="Vehicle Type" name="veh">
+                        <!-- <select id="input-group" style="background-color: black;">
+                            <option value="">Vehicle Type</option>
+                            <option value="">Bike</option>
+                            <option value="">Car</option>
+                            <option value="">Electric Vehicle</option>
+                        </select> -->
+                    </div>
+            
+                </div>
+
+                <button type="submit" value="Submit" id="submit-btn">Book Now</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
